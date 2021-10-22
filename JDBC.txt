@@ -1,0 +1,20 @@
+1) load the driver 
+	Class.forName("com.mysql.jdbc.Driver")//
+	or 
+	DriverManager.refisterDriver(new com.mysql.jdbc.Driver());
+	
+
+follow one any above
+
+
+2) Create a connection: 
+	Connection con = DriverManager.getConnection("url","username","password");
+	example Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbname","root","1996");
+
+3) Create query, Statement , PreparedStatement,CallableStatement
+
+Example   
+ String q ="select * from students";
+
+Statement stmt = con.createStatement();
+ResultSet = stmt.executeQuery(q);
