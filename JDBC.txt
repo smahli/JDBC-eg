@@ -18,3 +18,14 @@ Example
 
 Statement stmt = con.createStatement();
 ResultSet = stmt.executeQuery(q);
+
+4) Process the data :
+	while(set.next()){
+		int id = getInt("studentID");
+		String name= set.getString("studentName");
+		System.out.println(id);
+		System.out.println(name);
+	}
+
+5) Close the connection
+con.close();
